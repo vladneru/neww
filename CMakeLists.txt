@@ -33,7 +33,6 @@ find_package(CURL REQUIRED)
 include_directories(${CURL_INCLUDE_DIR})
 
 include_directories(${Boost_INCLUDE_DIRS})
-target_link_libraries(${GLOBAL_PROJECT_NAME} ${Boost_LIBRARIES} ${OPENSSL_LIBRARIES} ${CURL_LIBRARY})
 
 add_subdirectory(sources)
 include_directories(${CATCH_INCLUDE_DIR})
