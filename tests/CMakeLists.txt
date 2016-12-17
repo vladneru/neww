@@ -3,6 +3,6 @@ project(${CMAKE_PROJECT_NAME}_test CXX)
 
 file(GLOB SOURCES *.cpp)
 add_executable(${PROJECT_NAME} ${SOURCES})
-target_link_libraries(${GLOBAL_PROJECT_NAME} ${Boost_LIBRARIES} ${OPENSSL_LIBRARIES} ${CURL_LIBRARY})
+target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES} ${OPENSSL_LIBRARIES} ${CURL_LIBRARY})
 
 add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME} "-s" "-r" "compact" "--use-colour" "yes")
