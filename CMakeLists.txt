@@ -23,17 +23,8 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -fdiagnostics-color=always")
 include_directories("include")
 
-set(Boost_USE_STATIC_LIBS ON)
-set(Boost_USE_MULTITHREADED ON)
-set(Boost_USE_STATIC_RUNTIME OFF)
 
-find_package(OpenSSL REQUIRED)
-find_package(Boost REQUIRED)
-find_package(CURL REQUIRED)
-include_directories(${CURL_INCLUDE_DIR})
 
-include_directories(${Boost_INCLUDE_DIRS})
-target_link_libraries(neww ${Boost_LIBRARIES})
 
 add_subdirectory(sources)
 include_directories(${CATCH_INCLUDE_DIR})
