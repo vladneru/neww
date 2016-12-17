@@ -10,9 +10,10 @@ find_package(CURL REQUIRED)
 include_directories(${CURL_INCLUDE_DIR})
 
 include_directories(${Boost_INCLUDE_DIRS})
-target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+
 file(GLOB SOURCES *.cpp)
 add_executable(${PROJECT_NAME} ${SOURCES})
+target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${OPENSSL_LIBRARIES} ${CURL_LIBRARY})
 
 add_test(NAME ${PROJECT_NAME} COMMAND ${PROJECT_NAME} "-s" "-r" "compact" "--use-colour" "yes")
