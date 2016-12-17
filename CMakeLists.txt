@@ -23,6 +23,12 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -fdiagnostics-color=always")
 include_directories("include")
 
+find_package(OpenSSL REQUIRED)
+find_package(Boost REQUIRED)
+find_package(CURL REQUIRED)
+include_directories(${CURL_INCLUDE_DIR})
+
+include_directories(${Boost_INCLUDE_DIRS})
 
 
 
