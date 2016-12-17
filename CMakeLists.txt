@@ -33,6 +33,7 @@ find_package(CURL REQUIRED)
 include_directories(${CURL_INCLUDE_DIR})
 
 include_directories(${Boost_INCLUDE_DIRS})
+target_link_libraries(neww ${Boost_LIBRARIES})
 
 add_subdirectory(sources)
 include_directories(${CATCH_INCLUDE_DIR})
