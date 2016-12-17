@@ -27,7 +27,7 @@
 #include <openssl/pem.h>
 #define BUFSIZE 1024
 
-
+ 
 
 struct Data
 {
