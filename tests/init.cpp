@@ -1,5 +1,5 @@
 #include <catch.hpp>
-#include "client.cpp"
+#include "client.hpp"
 //#include "server.hpp"
 
 SCENARIO("Client", "[clean]") {
