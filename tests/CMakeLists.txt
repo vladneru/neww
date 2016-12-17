@@ -12,7 +12,7 @@ include_directories(${CURL_INCLUDE_DIR})
 include_directories(${Boost_INCLUDE_DIRS})
 
 file(GLOB SOURCES *.cpp)
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_executable(neww ${SOURCES})
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${OPENSSL_LIBRARIES} ${CURL_LIBRARY})
 
